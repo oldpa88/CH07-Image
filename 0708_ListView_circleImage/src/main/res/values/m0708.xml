@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="teacname">
+        <item>甲老師</item>
+        <item>乙老師</item>
+        <item>丙老師</item>
+        <item>丁老師</item>
+        <item>戊老師</item>
+        <item>己老師</item>
+        <item>庚老師</item>
+    </string-array>
+    <string-array name="descr">
+        <item>碩士</item>
+        <item>學士</item>
+        <item>碩士</item>
+        <item>學士</item>
+        <item>學士</item>
+        <item>碩士</item>
+        <item>學士</item>
+    </string-array>
+    <string name="m0708_descr">說明:</string>
+    <string name="m0708_t001">選擇:</string>
+    <string name="m0708_t002">講師:</string>
+
+
+</resources>

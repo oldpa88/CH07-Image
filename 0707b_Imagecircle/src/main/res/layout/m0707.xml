@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Silver"
+    android:padding="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/m0707_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/img03"
+        android:visibility="visible"
+        app:civ_border_color="@color/Yellow"
+        app:civ_border_width="2dp" />
+
+    <tw.oldpa.m0707b.CircleImgView
+        android:id="@+id/m0707_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/m0707_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:visibility="visible"
+        app:srcCompat="@drawable/img15th" />
+
+    <tw.oldpa.m0707b.CircleImgbutton
+        android:id="@+id/m0707_imgbutton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/m0707_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:srcCompat="@drawable/img02"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/m0707_t001"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/m0707_img"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/m0707_t001"
+        android:textAlignment="center"
+        android:textColor="@color/Blue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/myname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/myname"
+        android:textColor="@color/Yellow"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/0700_LifeCycle" />
+            <option value="$PROJECT_DIR$/0701_imageswitcher" />
+            <option value="$PROJECT_DIR$/0702_Animation" />
+            <option value="$PROJECT_DIR$/0703_HorizontalScrollView" />
+            <option value="$PROJECT_DIR$/0704_ListView_with_icons" />
+            <option value="$PROJECT_DIR$/0705_Game_Animation" />
+            <option value="$PROJECT_DIR$/0706_TextView_setup" />
+            <option value="$PROJECT_DIR$/0707_Imagecircle" />
+            <option value="$PROJECT_DIR$/0707a_Imagecircle" />
+            <option value="$PROJECT_DIR$/0707b_Imagecircle" />
+            <option value="$PROJECT_DIR$/0707c_CircleSample" />
+            <option value="$PROJECT_DIR$/0708_ListView_circleImage" />
+            <option value="$PROJECT_DIR$/0709_Android_SHAPE" />
+            <option value="$PROJECT_DIR$/0710_andrdrawable" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/circleimageview" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

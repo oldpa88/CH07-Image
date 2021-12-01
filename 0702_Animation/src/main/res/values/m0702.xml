@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="m0702_alpha">漸變透明度動畫效果</string>
+    <string name="m0702_trans">畫面轉換位置移動動畫效果</string>
+    <string name="m0702_rotate">漸變尺寸伸縮動畫效果,畫面轉移旋轉動畫效果</string>
+    <string name="m0702_bounce">畫面動畫彈跳效果</string>
+</resources>
