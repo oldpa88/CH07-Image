@@ -7,7 +7,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "CH07-Image"
-include ':app'
 include ':0700_LifeCycle'
 include ':0701_imageswitcher'
 include ':0702_Animation'
