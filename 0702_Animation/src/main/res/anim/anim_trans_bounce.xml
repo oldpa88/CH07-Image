@@ -6,7 +6,7 @@
             android:startOffset="200"
             android:fromXDelta="0"
             android:toXDelta="0"
-            android:fromYDelta="-100%p"
+            android:fromYDelta="-200%p"
             android:toYDelta="0%p"
             android:duration="3000"
             android:fillAfter="false"/>

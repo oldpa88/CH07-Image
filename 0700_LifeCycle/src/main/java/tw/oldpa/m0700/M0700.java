@@ -15,6 +15,12 @@ public class M0700 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.m0700);
         Log.d(TAG, "onCreate()");
+        setupViewComponent();
+    }
+
+    private void setupViewComponent() {
+        int a=9999+123;
+        Log.d(TAG, "setupViewComponent() " + a);
     }
 
     @Override

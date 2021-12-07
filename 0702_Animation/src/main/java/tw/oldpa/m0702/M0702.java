@@ -3,6 +3,8 @@ package tw.oldpa.m0702;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -41,6 +43,7 @@ public class M0702 extends AppCompatActivity implements
     private GridView gridview;
     private ImageSwitcher imgSwi;
     private Animation animation;
+    private int ss=1;
 
 
     @Override
@@ -82,13 +85,15 @@ public class M0702 extends AppCompatActivity implements
 //        4 Bounce    畫面動畫彈跳效果
 //        imgSwi.getAnimation();
 
-        int ss = (int) (Math.random() * 4 + 1);
-        ss = 4;
+//        int ss = (int) (Math.random() * 4 + 1);
+//        ss =2;
         imgSwi.destroyDrawingCache();
         imgSwi.setAnimation(null);
         imgSwi.setOutAnimation(null);
         imgSwi.setInAnimation(null);
         imgSwi.clearAnimation();
+
+
         switch (ss) {
             case 1: //漸變透明度動畫效果
                 imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_alpha_out));
@@ -115,8 +120,57 @@ public class M0702 extends AppCompatActivity implements
                 imgSwi.setAnimation(anim);
                 Toast.makeText(getApplicationContext(), getString(R.string.m0702_bounce), Toast.LENGTH_SHORT).show();
                 break;
+            case 5: //自訂義
+                Animation anim1 = AnimationUtils.loadAnimation(this, R.anim.anim_trans_bounce_10);
+                anim1.setInterpolator(new BounceInterpolator());
+                imgSwi.setAnimation(anim1);
+                Toast.makeText(getApplicationContext(), getString(R.string.item05), Toast.LENGTH_SHORT).show();
+                break;
         }
 
         imgSwi.setImageResource(imgArr[position]);
+    }
+    //*******************************************************************************************
+    @Override
+    public void onBackPressed() {
+//super.onBackPressed();//不執行這行
+        Toast.makeText(getApplication(), "禁用返回鍵", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.m0702, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.item01:
+                ss=1;
+                break;
+            case R.id.item02:
+                ss=2;
+                break;
+            case R.id.item03:
+                ss=3;
+                break;
+            case R.id.item04:
+                ss=4;
+                break;
+            case R.id.item05:
+                ss=5;
+                break;
+            case R.id.action_settings:
+                this.finish();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
