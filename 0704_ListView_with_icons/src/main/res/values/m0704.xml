@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="weekday">
+    <string-array name="weekday01">
         <item>星期日</item>
         <item>星期一</item>
         <item>星期二</item>
@@ -11,17 +11,18 @@
         <item>星期六</item>
     </string-array>
 
-    <!--<string-array name="weekday">-->
-        <!--<item>星期日#去睡覺</item>-->
-        <!--<item>星期一#穿新衣</item>-->
-        <!--<item>星期二#肚子餓</item>-->
-        <!--<item>星期三#去爬山</item>-->
-        <!--<item>星期四#去考試</item>-->
-        <!--<item>星期五#去跳舞</item>-->
-        <!--<item>星期六#去溜溜</item>-->
-    <!--</string-array>-->
+    <string-array name="weekday02">
+        <item>星期日猴子去睡覺</item>
+        <item>星期一猴子穿新衣</item>
+        <item>星期二猴子肚子餓</item>
+        <item>星期三猴子去爬山</item>
+        <item>星期四猴子去考試</item>
+        <item>星期五猴子去跳舞</item>
+        <item>星期六猴子去溜溜</item>
+    </string-array>
 
     <string name="m0704_descr">說明</string>
     <string name="m0704_t001">選擇:</string>
     <string name="m0704_t002">禮拜幾</string>
+    <string name="ans">你選擇:</string>
 </resources>

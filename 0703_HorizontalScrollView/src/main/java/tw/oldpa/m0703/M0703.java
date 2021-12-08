@@ -88,6 +88,7 @@ public class M0703 extends AppCompatActivity implements
         gridview.setLayoutParams(params);
         gridview.setColumnWidth(itemWidth);
         gridview.setHorizontalSpacing(10); // 間距
+//        int a=0;
         gridview.setStretchMode(GridView.NO_STRETCH); //
         gridview.setNumColumns(size); //
         gridview.setAdapter(new GridAdapter(this, thumbImgArr));

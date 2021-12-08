@@ -58,6 +58,7 @@ public class M0705 extends AppCompatActivity implements
 //        r_layout.setAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_out));
         r_layout.setAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_start));
         r_layout.setBackgroundResource(R.drawable.back01);
+        //---------------------------------------------------------------
         //--設定imageButton初始值為全透明
         u_setalpha();
         // --開啟時片頭音樂-----
