@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -44,6 +46,7 @@ public class M0703 extends AppCompatActivity implements
 
     GridView gridview;
     private ImageSwitcher imgSwi;
+    private int ss=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,64 +101,102 @@ public class M0703 extends AppCompatActivity implements
                 LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
         return v;
     }
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //-----------------------------------
-        imgSwi.clearAnimation();
-//        imgSwi.destroyDrawingCache();
-//        imgSwi.animate().cancel();
-//        imgSwi.setAnimation(null);
+//        1 alpha	    漸變透明度動畫效果
+//        2 translate	畫面轉換位置移動動畫效果
+//        3 scale	   rotate     漸變尺寸伸縮動畫效果 畫面轉移旋轉動畫效果
+//        4 Bounce    畫面動畫彈跳效果
+//        imgSwi.getAnimation();
 
-//        alpha	    漸變透明度動畫效果
-//        scale	        漸變尺寸伸縮動畫效果
-//        translate	畫面轉換位置移動動畫效果
-//        rotate	    畫面轉移旋轉動畫效果
-//        Bounce    畫面動畫彈跳效果
-        int ss=(int)(Math.random() * 4 + 1);
-//ss=3;
-//        switch ((int) (Math.random() * 5 + 1)) {
+//        int ss = (int) (Math.random() * 4 + 1);
+//        ss =2;
+        imgSwi.destroyDrawingCache();
+        imgSwi.setAnimation(null);
+        imgSwi.setOutAnimation(null);
+        imgSwi.setInAnimation(null);
+        imgSwi.clearAnimation();
+
+
         switch (ss) {
             case 1: //漸變透明度動畫效果
-                imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this,
-                        R.anim.anim_alpha_out));
-
-                imgSwi.setInAnimation(AnimationUtils.loadAnimation(this,
-                        R.anim.anim_alpha_in));
-
-                Toast.makeText(getApplicationContext(), "alpha", Toast.LENGTH_SHORT).show();
+                imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_alpha_out));
+                imgSwi.setInAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_alpha_in));
+                Toast.makeText(getApplicationContext(), getString(R.string.m0703_alpha), Toast.LENGTH_SHORT).show();
                 break;
 
             case 2: //畫面轉換位置移動動畫效果
-                imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this,
-                        R.anim.anim_trans_out));
-                imgSwi.setInAnimation(AnimationUtils.loadAnimation(this,
-                        R.anim.anim_trans_in));
-
-                Toast.makeText(getApplicationContext(), "trans", Toast.LENGTH_SHORT).show();
+                imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_trans_out));
+                imgSwi.setInAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_trans_in));
+                Toast.makeText(getApplicationContext(), getString(R.string.m0703_trans), Toast.LENGTH_SHORT).show();
                 break;
 
             case 3://漸變尺寸伸縮動畫效果+畫面轉移旋轉動畫效果
-                imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this,
-                        R.anim.anim_scale_rotate_out));
-
-                imgSwi.setInAnimation(AnimationUtils.loadAnimation(this,
-                        R.anim.anim_scale_rotate_in));
-
-                Toast.makeText(getApplicationContext(), "rotate", Toast.LENGTH_SHORT).show();
+                imgSwi.setOutAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_out));
+                imgSwi.setInAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_in));
+                Toast.makeText(getApplicationContext(), getString(R.string.m0703_rotate), Toast.LENGTH_SHORT).show();
                 break;
 
             case 4: //畫面動畫彈跳效果
+//                Animation anim = AnimationUtils.loadAnimation(this, R.anim.anim_trans_bounce_10);
                 Animation anim = AnimationUtils.loadAnimation(this, R.anim.anim_trans_bounce);
                 anim.setInterpolator(new BounceInterpolator());
                 imgSwi.setAnimation(anim);
-
-                Toast.makeText(getApplicationContext(), "Bounce", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.m0703_bounce), Toast.LENGTH_SHORT).show();
+                break;
+            case 5: //自訂義
+                Animation anim1 = AnimationUtils.loadAnimation(this, R.anim.anim_trans_bounce_10);
+                anim1.setInterpolator(new BounceInterpolator());
+                imgSwi.setAnimation(anim1);
+                Toast.makeText(getApplicationContext(), getString(R.string.item05), Toast.LENGTH_SHORT).show();
                 break;
         }
 
-
-        //-------------------------------------
         imgSwi.setImageResource(imgArr[position]);
     }
+    //*******************************************************************************************
+    @Override
+    public void onBackPressed() {
+//super.onBackPressed();//不執行這行
+        Toast.makeText(getApplication(), "禁用返回鍵", Toast.LENGTH_SHORT).show();
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.m0703, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.item01:
+                ss=1;
+                break;
+            case R.id.item02:
+                ss=2;
+                break;
+            case R.id.item03:
+                ss=3;
+                break;
+            case R.id.item04:
+                ss=4;
+                break;
+            case R.id.item05:
+                ss=5;
+                break;
+            case R.id.action_settings:
+                this.finish();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }    //*******************************************************************************************
 }
