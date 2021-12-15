@@ -16,6 +16,7 @@ import android.text.style.StyleSpan;
 import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.internal.TextScale;
 
@@ -45,40 +46,35 @@ public class M0706 extends AppCompatActivity implements View.OnClickListener {
 //        Spannable.SPAN_INCLUSIVE_INCLUSIVE：前後都包括。
 //        ---------------------
 
-        SpannableString sp = new SpannableString(getString(R.string.m0706_t001));
-        //設置超連結
-        sp.setSpan(new URLSpan("http://www.google.com.tw"),10,  17,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        SpannableString sp = new SpannableString(getString(R.string.m0706_t001,getString(R.string.m0706_x002),getString(R.string.m0706_x001)));
         //設置字體樣式一 ForegroundColorSpan
         sp.setSpan( new ForegroundColorSpan(Color.BLUE), 0, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //設置高亮樣式一
-        sp.setSpan(new BackgroundColorSpan(Color.RED), 21, 26, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sp.setSpan(new BackgroundColorSpan(Color.RED), 22, 27, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //設置亮度樣式二
-        sp.setSpan(new BackgroundColorSpan(Color.YELLOW), 28, 31, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sp.setSpan(new BackgroundColorSpan(Color.YELLOW), 29, 31, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //設置粗體
-        sp.setSpan(new StyleSpan(Typeface.BOLD), 34, 39, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+        sp.setSpan(new StyleSpan(Typeface.BOLD), 37, 39, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         //設置斜體
-        sp.setSpan(new StyleSpan(Typeface.ITALIC), 38, 44, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-
+        sp.setSpan(new StyleSpan(Typeface.ITALIC), 42, 44, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+        //設置超連結
+        sp.setSpan(new URLSpan("http://www.google.com.tw"),10,  17,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         //設置圖片
-        ImageSpan imageSpan1 = new ImageSpan(this, android.R.drawable.star_big_on);
-        sp.setSpan(imageSpan1, 5, 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        ImageSpan imageSpan2 = new ImageSpan(this, android.R.drawable.btn_star_big_off);
-        sp.setSpan(imageSpan2, 6, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        ImageSpan imageSpan3 = new ImageSpan(this, android.R.drawable.btn_star_big_on);
-        sp.setSpan(imageSpan3, 7, 8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-
+        sp.setSpan(new ImageSpan(this, android.R.drawable.star_big_on), 5, 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sp.setSpan(new ImageSpan(this, android.R.drawable.btn_star_big_off), 6, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sp.setSpan(new ImageSpan(this, android.R.drawable.btn_star_big_on), 7, 8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //SpannableString物件設置給TextView
         t001.setText(sp);
-        //設置TextView可點擊
+        //設置TextView可點擊URL
         t001.setMovementMethod(LinkMovementMethod.getInstance());
+
+        t001.setOnClickListener(this);
 
 
     }
 
     @Override
     public void onClick(View v) {
-
+        Toast.makeText(getApplicationContext(), "SpannableString",Toast.LENGTH_SHORT).show();
     }
 }

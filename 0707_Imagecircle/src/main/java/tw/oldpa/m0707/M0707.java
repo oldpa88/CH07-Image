@@ -23,7 +23,7 @@ public class M0707 extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void setupViewComponent() {
-        img01 = (ImageView) findViewById(R.id.m0707_img);
+        img01 = (ImageView) findViewById(R.id.m0707_imgview);
         img02 = (ImageButton) findViewById(R.id.m0707_imgbutton);
         ans = (TextView) findViewById(R.id.m0707_t001);
         // ---啟動監聽事件----
@@ -34,7 +34,7 @@ public class M0707 extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.m0707_img:
+            case R.id.m0707_imgview:
                 ans.setText(getString(R.string.m0707_t001) + getString(R.string.m0707_img));
                 break;
             case R.id.m0707_imgbutton:

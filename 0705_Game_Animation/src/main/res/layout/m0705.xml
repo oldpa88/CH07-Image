@@ -6,8 +6,9 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@drawable/back01"
+    android:clipChildren="false"
     android:padding="@dimen/Margins">
-
+    <!--android:clipChildren="false 可超出範圍-->
     <TextView
         android:id="@+id/m0705_t001"
         android:layout_width="match_parent"
@@ -70,29 +71,29 @@
         android:id="@+id/m0705_b002"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/m0705_t003"
         android:layout_below="@+id/m0705_b001"
+        android:layout_alignStart="@+id/m0705_t003"
         android:layout_marginStart="@dimen/Margins"
         android:layout_marginTop="@dimen/Margins"
         android:background="@drawable/shape_ring"
         android:contentDescription="@string/m0705_b002"
-        app:srcCompat="@drawable/stone"
         android:text="@string/m0705_b002"
-        android:textSize="@dimen/fontsize" />
+        android:textSize="@dimen/fontsize"
+        app:srcCompat="@drawable/stone" />
 
     <ImageButton
         android:id="@+id/m0705_b003"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/m0705_t003"
         android:layout_below="@+id/m0705_b002"
+        android:layout_alignStart="@+id/m0705_t003"
         android:layout_marginStart="@dimen/Margins"
         android:layout_marginTop="@dimen/Margins"
         android:background="#00000000"
         android:contentDescription="@string/m0705_b003"
-        app:srcCompat="@drawable/net"
         android:text="@string/m0705_b003"
-        android:textSize="@dimen/fontsize" />
+        android:textSize="@dimen/fontsize"
+        app:srcCompat="@drawable/net" />
 
     <ImageSwitcher
         android:id="@+id/m0705_c001"
@@ -101,11 +102,13 @@
         android:layout_alignStart="@+id/m0705_t002"
         android:layout_alignTop="@+id/m0705_b002"
         android:layout_marginStart="@dimen/Margins"
+        android:background="@drawable/ring"
         android:contentDescription="@string/m0705_b001"
         android:gravity="center_vertical|center_horizontal"
-        android:src="@drawable/scissors"
+        android:src="@drawable/net"
         android:text="@string/m0705_b001"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/m0705_s001"

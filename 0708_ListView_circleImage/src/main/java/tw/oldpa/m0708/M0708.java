@@ -20,7 +20,14 @@ public class M0708 extends ListActivity {
     private TextView mDesc;
     private String[] listDescr;
     private String[] listFromResource;
-
+    private Integer[] imgArr={
+            R.drawable.t001,
+            R.drawable.t002,
+            R.drawable.t003,
+            R.drawable.t004,
+            R.drawable.t005,
+            R.drawable.t006,
+            R.drawable.t007};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,14 +41,7 @@ public class M0708 extends ListActivity {
         //抓資料放到陣列中
          listFromResource = getResources().getStringArray(R.array.teacname);
          listDescr = getResources().getStringArray(R.array.descr);
-        Integer[] imgArr={
-                R.drawable.t001,
-                R.drawable.t002,
-                R.drawable.t003,
-                R.drawable.t004,
-                R.drawable.t005,
-                R.drawable.t006,
-                R.drawable.t007};
+
         mList = new ArrayList<Map<String,Object>>();
 
         for(int i=0; i<listFromResource.length;i++){

@@ -31,7 +31,7 @@ public class CircleImgView extends AppCompatImageView {
 
     private Bitmap scaleBitmap(Bitmap bitmap) {
         int width = getWidth();
-        //一定要強轉成float 不然有可能因為精度不夠 出現 scale為0 的錯誤
+        //一定要強轉成float不然有可能因為精度不夠出現scale為0的錯誤
         float scale = (float) width / (float) bitmap.getWidth();
         Matrix matrix = new Matrix();
         matrix.postScale(scale, scale);

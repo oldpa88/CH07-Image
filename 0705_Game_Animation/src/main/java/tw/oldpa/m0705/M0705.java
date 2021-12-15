@@ -59,7 +59,7 @@ public class M0705 extends AppCompatActivity implements
         r_layout.setAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_start));
         r_layout.setBackgroundResource(R.drawable.back01);
         //---------------------------------------------------------------
-        //--設定imageButton初始值為全透明
+        //--設定imageutton初始值為全透明B
         u_setalpha();
         // --開啟時片頭音樂-----
         startmusic = MediaPlayer.create(M0705.this, R.raw.guess);

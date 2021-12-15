@@ -6,20 +6,61 @@
     android:toDegrees="1080">
 
     <shape
-        android:innerRadius="3dp"
+        android:innerRadius="40dp"
         android:shape="ring"
-        android:thicknessRatio="8"
+        android:thicknessRatio="10"
         android:useLevel= "false" >
-        <size
-            android:width="10dp" android:height="10dp"/>
-        <!--<gradient-->
-            <!--android:endColor= "#2F90BD"-->
-            <!--android:startColor= "#FFFFFF"-->
-            <!--android:type= "sweep"  />-->
+
+            <padding
+                android:left="4dp"
+                android:top="4dp"
+                android:right="2dp"
+                android:bottom="2dp" />
+
 
         <gradient
             android:endColor="#2F90BD"
-            android:startColor="#ff0000"
+            android:startColor="#FF0000"
+
             android:type="sweep"/>
     </shape>
 </rotate>
+<!--    android:endColor="#2F90BD"-->
+<!--    android:startColor="#ff0000"-->
+<!--<size-->
+<!--android:width="100dp"-->
+<!--android:height="100dp"/>-->
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<rotate  xmlns:android= "http://schemas.android.com/apk/res/android"-->
+<!--android:fromDegrees="0"-->
+<!--android:pivotX="50%"-->
+<!--android:pivotY="50%"-->
+<!--android:toDegrees="1080">-->
+
+<!--<shape-->
+<!--    android:innerRadius="38dp"-->
+<!--    android:shape="ring"-->
+<!--    android:thicknessRatio="8"-->
+<!--    android:useLevel= "false" >-->
+
+<!--    <size-->
+<!--        android:width="100dp"-->
+<!--        android:height="100dp"/>-->
+
+<!--    &lt;!&ndash;<gradient&ndash;&gt;-->
+<!--    &lt;!&ndash;android:endColor= "#2F90BD"&ndash;&gt;-->
+<!--    &lt;!&ndash;android:startColor= "#FFFFFF"&ndash;&gt;-->
+<!--    &lt;!&ndash;android:type= "sweep"  />&ndash;&gt;-->
+
+<!--    <padding-->
+<!--        android:left="4dp"-->
+<!--        android:top="4dp"-->
+<!--        android:right="2dp"-->
+<!--        android:bottom="2dp" />-->
+
+<!--    <gradient-->
+<!--        android:endColor="#2F90BD"-->
+<!--        android:startColor="#ffff00"-->
+<!--        android:type="sweep"/>-->
+<!--</shape>-->
+<!--</rotate>-->
