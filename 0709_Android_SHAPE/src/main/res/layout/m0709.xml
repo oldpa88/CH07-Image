@@ -12,9 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:background="@drawable/b001"
         android:onClick="toShape"
         android:text="@string/m0709_b001"
         android:textAllCaps="false"
+        android:textColor="@color/Yellow"
         android:textSize="@dimen/fontsize" />
 
     <Button
@@ -22,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:background="@drawable/b002"
         android:onClick="toSelector"
         android:text="@string/m0709_b002"
         android:textAllCaps="false"

@@ -19,8 +19,8 @@ include ':0707a_Imagecircle'
 include ':0707b_Imagecircle'
 include ':0707c_CircleSample'
 include ':0708_ListView_circleImage'
+include ':0708a_ListActivity_Title'
 include ':0709_Android_SHAPE'
 include ':0710_andrdrawable'
-
 include ':circleimageview'
 
